@@ -1,23 +1,22 @@
 <?php
 /**
  * Plugin Name:     NUGM Disable Custom Post Types
- * Plugin URI:      PLUGIN SITE HERE
+ * Plugin URI:      
  * Description:     Disableds NUGM Cusom Post types if not needed
  * Author:          YOUR NAME HERE
  * Author URI:      YOUR SITE HERE
- * Text Domain:     soc-disable-event
+ * Text Domain:     soc
  * Domain Path:     /languages
  * Version:         0.1.0
  *
- * @package         Soc_Disable_Event
+ * @package         SoC
  */
 
 // Your code starts here.
 add_action('init', function () {
 
 	$options = get_option('nugm_disable_custom_post_types_settings');
-	// print_r($options);
-	// die();
+
 
 	if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_directory_item']) {
 		unregister_post_type('nu_gm_directory_item');

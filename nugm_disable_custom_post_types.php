@@ -3,8 +3,8 @@
  * Plugin Name:     NUGM Disable Custom Post Types
  * Plugin URI:      
  * Description:     Disableds NUGM Cusom Post types if not needed
- * Author:          YOUR NAME HERE
- * Author URI:      YOUR SITE HERE
+ * Author:          NuSOC
+ * Author URI:      NUSOC
  * Text Domain:     soc
  * Domain Path:     /languages
  * Version:         0.1.0

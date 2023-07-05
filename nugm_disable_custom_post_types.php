@@ -29,7 +29,8 @@ add_action('init', function () {
 	if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_event']) {
 		unregister_post_type('nu_gm_event');
 	};
-	
+
+	// TODO: add try catch block
 	if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_project']) {
 		unregister_post_type('nu_gm_project');
 	};

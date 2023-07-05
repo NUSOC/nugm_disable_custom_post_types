@@ -30,10 +30,12 @@ add_action('init', function () {
 		unregister_post_type('nu_gm_event');
 	};
 
-	// TODO: add try catch block
-	if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_project']) {
-		unregister_post_type('nu_gm_project');
-	};
+	// TODO: catch this error which WARNS in php 8.x
+	if (isset($options['nugm_disable_custom_post_types_checkbox_nu_gm_project'])) {
+		if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_project']) {
+			unregister_post_type('nu_gm_project');
+		};
+	}
 }, 10000);
 
 add_action('admin_menu', 'nugm_disable_custom_post_types_add_admin_menu');

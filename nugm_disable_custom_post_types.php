@@ -23,7 +23,8 @@ add_action('init', function () {
 	};
 
 	// if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_news']) {
-	if ( isset( $options['nugm_disable_custom_post_types_checkbox_nu_gm_news'] ) && $options['nugm_disable_custom_post_types_checkbox_nu_gm_news'] ) {
+	// if ( isset( $options['nugm_disable_custom_post_types_checkbox_nu_gm_news'] ) && $options['nugm_disable_custom_post_types_checkbox_nu_gm_news'] ) {
+	if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_news'] ?? false) {
 		unregister_post_type('nu_gm_news');
 	};
 

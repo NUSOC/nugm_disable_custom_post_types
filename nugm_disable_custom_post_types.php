@@ -18,19 +18,23 @@ add_action('init', function () {
 	$options = get_option('nugm_disable_custom_post_types_settings');
 
 
-	if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_directory_item'] ?? false) {
-		unregister_post_type('nu_gm_directory_item');
-	};
+	if (isset($options['nugm_disable_custom_post_types_checkbox_nu_gm_directory_item'] )) {
+		if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_directory_item'] ) {
+			unregister_post_type('nu_gm_directory_item');
+		}
+	}
 
-	// if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_news']) {
-	// if ( isset( $options['nugm_disable_custom_post_types_checkbox_nu_gm_news'] ) && $options['nugm_disable_custom_post_types_checkbox_nu_gm_news'] ) {
-	if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_news'] ?? false) {
-		unregister_post_type('nu_gm_news');
-	};
+	if (isset($options['nugm_disable_custom_post_types_checkbox_nu_gm_news'])) {
+		if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_news']) {
+			unregister_post_type('nu_gm_news');
+		};
+	}
 
-	if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_event'] ?? false ) {
-		unregister_post_type('nu_gm_event');
-	};
+	if (isset($options['nugm_disable_custom_post_types_checkbox_nu_gm_event'] )) {
+		if ($options['nugm_disable_custom_post_types_checkbox_nu_gm_event'] ) {
+			unregister_post_type('nu_gm_event');
+		};
+	}
 
 	// TODO: catch this error which WARNS in php 8.x
 	if (isset($options['nugm_disable_custom_post_types_checkbox_nu_gm_project'])) {
